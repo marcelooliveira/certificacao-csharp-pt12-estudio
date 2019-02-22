@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item01 - Validar dados JSON", "Item01 - Validar dados JSON", "{5FACA200-1C05-42EA-B703-04A090A5FB75}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item02 - escolher o tipo de coleta de dados adequado", "Item02 - escolher o tipo de coleta de dados adequado", "{0F279CEF-3035-4FAC-B256-58084BB10545}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item03 - gerenciar integridade de dados", "Item03 - gerenciar integridade de dados", "{E5BA316C-D8DA-452A-A447-DEA76CFB4FAE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item04 - avaliar uma expressão regular para validar o formato de entrada", "Item04 - avaliar uma expressão regular para validar o formato de entrada", "{31361932-894D-4F6B-A144-F025A7697E5E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item05 - usar funções internas para validar tipos e conteúdos", "Item05 - usar funções internas para validar tipos e conteúdos", "{18701B0F-FFD7-41C0-9EDE-3F44E08F83A2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item06 - Escolher um algoritmo de criptografia apropriado", "Item06 - Escolher um algoritmo de criptografia apropriado", "{CF6349D3-5388-4329-9629-38850DBD0BBF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item07 - gerenciar e criar certificados", "Item07 - gerenciar e criar certificados", "{0B95B2FD-520B-4F4A-8682-07985A844B7E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item08 - implementar gerenciamento de chave", "Item08 - implementar gerenciamento de chave", "{C0216346-F816-4A81-8D73-0ECD0177ABB4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item09 - implementar o namespace System.Security", "Item09 - implementar o namespace System.Security", "{7B7080A0-D079-46FC-B871-50DFEFB4C217}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item10 - fazendo hash de dados", "Item10 - fazendo hash de dados", "{607DB4EE-0B55-4944-A6C3-9DFD4376B5AE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item11 - criptografar fluxos", "Item11 - criptografar fluxos", "{663B46D1-9B22-4203-BF46-B2CAA86BA770}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "antes - código do aluno", "antes - código do aluno", "{97532ED4-44C7-4989-B9CA-A4DD38BEC8E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "depois - código do instrutor", "depois - código do instrutor", "{B0D7A73A-172D-4801-98B7-9FC7DA0273F8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item11 - criptografar fluxos", "Item11 - criptografar fluxos", "{FDF35CAB-1F37-4589-81AA-7EEEEBCB325B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item01 - Validar dados JSON", "Item01 - Validar dados JSON", "{5527B681-798E-4F96-B4F3-D89883445C7E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item02 - escolher o tipo de coleta de dados adequado", "Item02 - escolher o tipo de coleta de dados adequado", "{997C02FB-0385-4E7F-9A8C-ECB812BE2483}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item03 - gerenciar integridade de dados", "Item03 - gerenciar integridade de dados", "{93B65769-3F33-4001-8035-8FB78EE627EF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item04 - avaliar uma expressão regular para validar o formato de entrada", "Item04 - avaliar uma expressão regular para validar o formato de entrada", "{CBEA46DA-90A2-4AE2-B509-60D9695D407B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item05 - usar funções internas para validar tipos e conteúdos", "Item05 - usar funções internas para validar tipos e conteúdos", "{34C3CB55-E45F-4482-8480-3FC9F13C7987}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item06 - Escolher um algoritmo de criptografia apropriado", "Item06 - Escolher um algoritmo de criptografia apropriado", "{D85029CF-F6D6-4474-839F-7A5E44E2EFDC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item07 - gerenciar e criar certificados", "Item07 - gerenciar e criar certificados", "{3D6952FD-741F-42AC-9E58-EA70A60008AA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item08 - implementar gerenciamento de chave", "Item08 - implementar gerenciamento de chave", "{7333E920-A15E-489F-AB35-5F4BD69A1C9A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item09 - implementar o namespace System.Security", "Item09 - implementar o namespace System.Security", "{BFF8F07B-4953-4D73-AD64-90B4E9D864F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item10 - fazendo hash de dados", "Item10 - fazendo hash de dados", "{EEAB713B-E5C5-403A-A3D2-4690A3F6E3C9}"
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5FACA200-1C05-42EA-B703-04A090A5FB75} = {B0D7A73A-172D-4801-98B7-9FC7DA0273F8}
+		{0F279CEF-3035-4FAC-B256-58084BB10545} = {B0D7A73A-172D-4801-98B7-9FC7DA0273F8}
+		{E5BA316C-D8DA-452A-A447-DEA76CFB4FAE} = {B0D7A73A-172D-4801-98B7-9FC7DA0273F8}
+		{31361932-894D-4F6B-A144-F025A7697E5E} = {B0D7A73A-172D-4801-98B7-9FC7DA0273F8}
+		{18701B0F-FFD7-41C0-9EDE-3F44E08F83A2} = {B0D7A73A-172D-4801-98B7-9FC7DA0273F8}
+		{CF6349D3-5388-4329-9629-38850DBD0BBF} = {B0D7A73A-172D-4801-98B7-9FC7DA0273F8}
+		{0B95B2FD-520B-4F4A-8682-07985A844B7E} = {B0D7A73A-172D-4801-98B7-9FC7DA0273F8}
+		{C0216346-F816-4A81-8D73-0ECD0177ABB4} = {B0D7A73A-172D-4801-98B7-9FC7DA0273F8}
+		{7B7080A0-D079-46FC-B871-50DFEFB4C217} = {B0D7A73A-172D-4801-98B7-9FC7DA0273F8}
+		{607DB4EE-0B55-4944-A6C3-9DFD4376B5AE} = {B0D7A73A-172D-4801-98B7-9FC7DA0273F8}
+		{663B46D1-9B22-4203-BF46-B2CAA86BA770} = {B0D7A73A-172D-4801-98B7-9FC7DA0273F8}
+		{FDF35CAB-1F37-4589-81AA-7EEEEBCB325B} = {97532ED4-44C7-4989-B9CA-A4DD38BEC8E3}
+		{5527B681-798E-4F96-B4F3-D89883445C7E} = {97532ED4-44C7-4989-B9CA-A4DD38BEC8E3}
+		{997C02FB-0385-4E7F-9A8C-ECB812BE2483} = {97532ED4-44C7-4989-B9CA-A4DD38BEC8E3}
+		{93B65769-3F33-4001-8035-8FB78EE627EF} = {97532ED4-44C7-4989-B9CA-A4DD38BEC8E3}
+		{CBEA46DA-90A2-4AE2-B509-60D9695D407B} = {97532ED4-44C7-4989-B9CA-A4DD38BEC8E3}
+		{34C3CB55-E45F-4482-8480-3FC9F13C7987} = {97532ED4-44C7-4989-B9CA-A4DD38BEC8E3}
+		{D85029CF-F6D6-4474-839F-7A5E44E2EFDC} = {97532ED4-44C7-4989-B9CA-A4DD38BEC8E3}
+		{3D6952FD-741F-42AC-9E58-EA70A60008AA} = {97532ED4-44C7-4989-B9CA-A4DD38BEC8E3}
+		{7333E920-A15E-489F-AB35-5F4BD69A1C9A} = {97532ED4-44C7-4989-B9CA-A4DD38BEC8E3}
+		{BFF8F07B-4953-4D73-AD64-90B4E9D864F1} = {97532ED4-44C7-4989-B9CA-A4DD38BEC8E3}
+		{EEAB713B-E5C5-403A-A3D2-4690A3F6E3C9} = {97532ED4-44C7-4989-B9CA-A4DD38BEC8E3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5384676B-E280-4841-A149-457EA86B8239}
+	EndGlobalSection
+EndGlobal
