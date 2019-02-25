@@ -8,7 +8,9 @@ namespace Program01_02
     {
         static void Main(string[] args)
         {
-            //Filme filme = new Filme(diretor: "Tim Burton", titulo: "A Fantástica Fábrica de Chocolate", duracaoMinutos: 115);
+            //Filme filme = new Filme(diretor: "Tim Burton", 
+            //    titulo: "A Fantástica Fábrica de Chocolate", 
+            //    duracaoMinutos: 115);
             //XmlSerializer serializador = new XmlSerializer(typeof(Filme));
 
             //TextWriter writer = new StringWriter();
