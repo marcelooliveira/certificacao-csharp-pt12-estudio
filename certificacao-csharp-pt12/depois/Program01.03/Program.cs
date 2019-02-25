@@ -19,7 +19,7 @@ namespace Program01._03
             {
                 Console.WriteLine(e.Message);
             }
-            Console.ReadKey();
+            Console.ReadLine();
         }
     }
 

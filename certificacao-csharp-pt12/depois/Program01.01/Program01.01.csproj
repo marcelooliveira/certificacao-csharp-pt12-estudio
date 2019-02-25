@@ -6,8 +6,4 @@
     <RootNamespace>Program01._01</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
-  </ItemGroup>
-
 </Project>

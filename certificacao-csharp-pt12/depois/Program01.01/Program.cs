@@ -4,14 +4,33 @@ using System.Collections.Generic;
 
 namespace Program01_01
 {
+    class Filme
+    {
+        public string Diretor { get; set; }
+        public string Titulo { get; set; }
+        public int DuracaoMinutos { get; set; }
+
+        public override string ToString()
+        {
+            return Diretor + " - " + Titulo + " - " + DuracaoMinutos.ToString() + " minutos";
+        }
+
+        public Filme(string diretor, string titulo, int duracaoMinutos)
+        {
+            Diretor = diretor;
+            Titulo = titulo;
+            DuracaoMinutos = duracaoMinutos;
+        }
+    }
+
     class Program
     {
         static void Main(string[] args)
         {
-            Filme filme = new Filme(diretor: "James Cameron", titulo: "Titanic", duracaoMinutos: 194);
-            string json = JsonConvert.SerializeObject(filme);
-            Console.WriteLine("JSON: ");
-            Console.WriteLine(json);
+            //Filme filme = new Filme(diretor: "James Cameron", titulo: "Titanic", duracaoMinutos: 194);
+            //string json = JsonConvert.SerializeObject(filme);
+            //Console.WriteLine("JSON: ");
+            //Console.WriteLine(json);
 
             //Filme filmeConvertido = JsonConvert.DeserializeObject<Filme>(json);
             //Console.WriteLine("Dados do objeto Filme: ");
@@ -45,24 +64,6 @@ namespace Program01_01
         }
     }
 
-    class Filme
-    {
-        public string Diretor { get; set; }
-        public string Titulo { get; set; }
-        public int DuracaoMinutos { get; set; }
-
-        public override string ToString()
-        {
-            return Diretor + " - " + Titulo + " - " + DuracaoMinutos.ToString() + " minutos";
-        }
-
-        public Filme(string diretor, string titulo, int duracaoMinutos)
-        {
-            Diretor = diretor;
-            Titulo = titulo;
-            DuracaoMinutos = duracaoMinutos;
-        }
-    }
 
     class FilmeSimples
     {
