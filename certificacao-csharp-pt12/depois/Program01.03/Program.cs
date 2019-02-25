@@ -7,14 +7,14 @@ namespace Program01._03
     {
         static void Main(string[] args)
         {
-            string jsonInvalido 
+            string json 
                 = "{" +
                         "\"Diretor\":\"James Cameron\"," +
                         "\"Titulo\":\"Titanic\"," +
                         "\"DuracaoMinutos\":194" +
                     "}";
 
-            Filme filme = JsonConvert.DeserializeObject<Filme>(jsonInvalido);
+            Filme filme = JsonConvert.DeserializeObject<Filme>(json);
             Console.WriteLine("Dados do objeto Filme: ");
             Console.WriteLine(filme);
             Console.ReadLine();
