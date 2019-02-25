@@ -7,18 +7,16 @@ namespace Program01._03
     {
         static void Main(string[] args)
         {
-            string jsonInvalido = "{\"Diretor\":\"James Cameron\",\"Titulo\":\"Titanic\",\"DuracaoMinutos\":194\"}";
+            string jsonInvalido 
+                = "{" +
+                        "\"Diretor\":\"James Cameron\"," +
+                        "\"Titulo\":\"Titanic\"," +
+                        "\"DuracaoMinutos\":194" +
+                    "}";
 
-            try
-            {
-                Filme filme = JsonConvert.DeserializeObject<Filme>(jsonInvalido);
-                Console.WriteLine("Dados do objeto Filme: ");
-                Console.WriteLine(filme);
-            }
-            catch (JsonReaderException e)
-            {
-                Console.WriteLine(e.Message);
-            }
+            Filme filme = JsonConvert.DeserializeObject<Filme>(jsonInvalido);
+            Console.WriteLine("Dados do objeto Filme: ");
+            Console.WriteLine(filme);
             Console.ReadLine();
         }
     }
