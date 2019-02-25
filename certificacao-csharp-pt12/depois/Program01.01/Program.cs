@@ -13,36 +13,35 @@ namespace Program01_01
             Console.WriteLine("JSON: ");
             Console.WriteLine(json);
 
-            Filme filme2 = JsonConvert.DeserializeObject<Filme>(json);
-            Console.WriteLine("Dados do objeto Filme: ");
-            Console.WriteLine(filme2);
-            Console.WriteLine();
+            //Filme filmeConvertido = JsonConvert.DeserializeObject<Filme>(json);
+            //Console.WriteLine("Dados do objeto Filme: ");
+            //Console.WriteLine(filmeConvertido);
+            //Console.WriteLine();
 
-            List<Filme> album = new List<Filme>();
+            //List<Filme> coletaneaJamesCameron = new List<Filme>();
 
-            string[] titulos = new[] { "Titanic", "Britannic", "Magnific", "Mecanic" };
+            //Filme filme1 = new Filme(diretor: "James Cameron", titulo: "Titanic", duracaoMinutos: 194);
+            //Filme filme2 = new Filme(diretor: "James Cameron", titulo: "Avatar", duracaoMinutos: 162);
+            //Filme filme3 = new Filme(diretor: "James Cameron", titulo: "O Exterminador do Futuro", duracaoMinutos: 107);
+            //coletaneaJamesCameron.Add(filme1);
+            //coletaneaJamesCameron.Add(filme2);
+            //coletaneaJamesCameron.Add(filme3);
 
-            foreach (string titulo in titulos)
-            {
-                Filme filme3 = new Filme(diretor: "James Cameron", titulo: titulo, duracaoMinutos: 194);
-                album.Add(filme3);
-            }
+            //string arrayJson = JsonConvert.SerializeObject(coletaneaJamesCameron);
+            //Console.WriteLine("string JSON: ");
+            //Console.WriteLine(arrayJson);
+            //Console.WriteLine();
 
-            string arrayJson = JsonConvert.SerializeObject(album);
-            Console.WriteLine("string JSON: ");
-            Console.WriteLine(arrayJson);
-            Console.WriteLine();
+            //List<FilmeSimples> filmesSimples = JsonConvert.DeserializeObject<List<FilmeSimples>>(arrayJson);
 
-            List<FilmeSimples> filmesSimples = JsonConvert.DeserializeObject<List<FilmeSimples>>(arrayJson);
+            //Console.WriteLine("Dados do objeto FilmeSimples: ");
+            //foreach (FilmeSimples filmeSimples in filmesSimples)
+            //{
+            //    Console.WriteLine(filmeSimples);
+            //}
+            //Console.WriteLine();
 
-            Console.WriteLine("Dados do objeto FilmeSimples: ");
-            foreach (FilmeSimples filmeSimples in filmesSimples)
-            {
-                Console.WriteLine(filmeSimples);
-            }
-            Console.WriteLine();
-
-            Console.ReadKey();
+            Console.ReadLine();
         }
     }
 
