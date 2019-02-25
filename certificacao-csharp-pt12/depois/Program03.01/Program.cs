@@ -8,8 +8,9 @@ namespace Program03
         {
             Filme filme = new Filme(diretor: "James Cameron", titulo: "Titanic", duracaoMinutos: 194);
 
-            ImprimeFilme(new Filme(filme));
-
+            ImprimeFilme(filme);
+            //ImprimeFilme(new Filme(filme));
+            
             Console.WriteLine(filme.Diretor);
             Console.ReadKey();
         }
