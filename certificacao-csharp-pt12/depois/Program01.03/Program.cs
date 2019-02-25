@@ -11,12 +11,21 @@ namespace Program01._03
                 = "{" +
                         "\"Diretor\":\"James Cameron\"," +
                         "\"Titulo\":\"Titanic\"," +
-                        "\"DuracaoMinutos\":194" +
+                        "\"DuracaoMinutos\":abc" +
                     "}";
 
-            Filme filme = JsonConvert.DeserializeObject<Filme>(json);
-            Console.WriteLine("Dados do objeto Filme: ");
-            Console.WriteLine(filme);
+            try
+            {
+                Filme filme = JsonConvert.DeserializeObject<Filme>(json);
+                Console.WriteLine("Dados do objeto Filme: ");
+                Console.WriteLine(filme);
+            }
+            catch(JsonReaderException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+
             Console.ReadLine();
         }
     }
