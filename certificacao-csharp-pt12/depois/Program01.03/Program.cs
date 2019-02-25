@@ -1,0 +1,49 @@
+﻿using Newtonsoft.Json;
+using System;
+
+namespace Program01._03
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string jsonInvalido = "{\"Diretor\":\"James Cameron\",\"Titulo\":\"Titanic\",\"DuracaoMinutos\":194\"}";
+
+            try
+            {
+                Filme filme = JsonConvert.DeserializeObject<Filme>(jsonInvalido);
+                Console.WriteLine("Dados do objeto Filme: ");
+                Console.WriteLine(filme);
+            }
+            catch (JsonReaderException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            Console.ReadKey();
+        }
+    }
+
+    public class Filme
+    {
+        public string Diretor { get; set; }
+        public string Titulo { get; set; }
+        public int DuracaoMinutos { get; set; }
+
+        public override string ToString()
+        {
+            return Diretor + " - " + Titulo + " - " + DuracaoMinutos.ToString() + " minutos";
+        }
+
+        public Filme()
+        {
+
+        }
+
+        public Filme(string diretor, string titulo, int duracaoMinutos)
+        {
+            Diretor = diretor;
+            Titulo = titulo;
+            DuracaoMinutos = duracaoMinutos;
+        }
+    }
+}
