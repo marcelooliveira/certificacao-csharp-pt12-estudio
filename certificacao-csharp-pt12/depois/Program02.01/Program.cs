@@ -1,28 +1,127 @@
-﻿using System.Collections.Generic;
-using System.IO;
-using System.Threading.Tasks;
-using Filmes.Models;
-using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
+﻿using System;
+using System.Collections.Generic;
 
-namespace Filmes
+namespace Program02._01
 {
-    public class Program
+    class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
-            var host = BuildWebHost(args);
-            var seedData = new SeedData(host);
-            seedData.Initialize();
-            host.Run();
-        }
+            //https://cursos.alura.com.br/course/csharp-collections/task/29512
 
-        public static IWebHost BuildWebHost(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>()
-                .Build();
+            //https://docs.google.com/presentation/d/1ICj8giHOiyW1AaHaiAtQyoGpW1LrhuqJ4GiX9BBHZHI/edit#slide=id.p
+
+            //Apresentaremos um pequeno guia para ajudarmos na escolha da 
+            //coleção adequada para determinadas situações. 
+            //Vamos imaginar uma coleção em que sempre iremos remover o primeiro 
+            //elemento colocado, isto é, a remoção será feita na mesma ordem da 
+            //entrada dos elementos.
+
+            //Como exemplo, usaremos uma fila de pedágio, ou uma fila de carros 
+            //em um estacionamento, em que é necessário manter - se a ordem de 
+            //prioridade. Assim, a coleção adequada é uma** fila**, ou 
+            //`Queue<T>`, em inglês.
+
+            var veiculo1 = "van";
+            var veiculo2 = "kombi";
+            var veiculo3 = "guincho";
+            var veiculo4 = "pickup";
+
+            Queue<string> pedagio = new Queue<string>();
+            pedagio.Enqueue(veiculo1);
+            pedagio.Enqueue(veiculo2);
+            pedagio.Enqueue(veiculo3);
+            pedagio.Enqueue(veiculo4);
+
+            Console.WriteLine(pedagio.Dequeue());
+            Console.WriteLine(pedagio.Dequeue());
+            Console.WriteLine(pedagio.Dequeue());
+            Console.WriteLine(pedagio.Dequeue());
+            Console.WriteLine();
+
+            //Trata - se de uma coleção genérica que receberá os elementos 
+            //adicionados na fila pelo método `Enqueue()`. Os mesmos serão 
+            //removidos usando - se `Dequeue()` e, ao fazermos isto, os 
+            //elementos são reposicionados de forma que o segundo passa a 
+            //ser o primeiro, e assim sucessivamente.
+
+            //Há também situações em que o elemento removido será sempre o 
+            //último que foi adicionado.Isto ocorre com a coleção genérica 
+            //**pilha * *, ou `Stack<T>`, em inglês. Nela, os elementos 
+            //são adicionados usando - se `Push()`, e removidos com o método 
+            //`Pop()`.
+
+            const string google = "google.com";
+            string caelum = "caelum.com.br";
+            string alura = "alura.com.br";
+
+            Stack<string> historicoNavegador = new Stack<string>();
+
+            historicoNavegador.Push(google);
+            Console.WriteLine("P");
+            historicoNavegador.Push(caelum);
+            historicoNavegador.Push(alura);
+
+            Console.WriteLine(historicoNavegador.Pop());
+            Console.WriteLine(historicoNavegador.Pop());
+            Console.WriteLine(historicoNavegador.Pop());
+
+            //Existe um tipo de coleção, a mais flexível e poderosa de todas: 
+            //a `List < T >`, uma implementação do .NET Framework que permite 
+            //a inserção de um elemento em qualquer posição da coleção
+            //(`Insert()`), ou especificamente no fim(`Add()` e `AddRange()`).
+            //É possível também remover elementos do meio da coleção, com 
+            //`Remove()` ou `RemoveRange()`, limpar a coleção(`Clear()`) ou 
+            //reverter sua ordem(`Reverse()`). Pode - se também ordená-la por 
+            //um critério qualquer, com `Sort()`.
+
+            //Caso tenhamos que lidar com arquivos de baixo nível(bytes, 
+            //números inteiros, por exemplo) ou tamanho fixo, quase sempre 
+            //utilizamos uma **matriz * *, ou* array*, em inglês, uma coleção 
+            //de tamanho fixo que facilita o uso através do índice da coleção.
+
+            //```
+            //data[27] = #9EA3A7
+            //```
+
+            //Tomando como exemplo um array cujas informações gráficas, no 
+            //caso, uma cor, um pixel sendo lido em uma determinada posição, 
+            //são mantidas, é bastante simples acessar os dados de forma 
+            //indexada. No entanto, quando precisamos alterar sua dimensão, 
+            //é mais recomendado convertê - lo para uma lista.
+
+            //Ainda, há situações em que é necessário inserir ou remover muitos 
+            //dados em uma coleção, de forma rápida. Nestes casos, pode-se 
+            //considerar utilizar uma** lista ligada * *, ou 
+            //`LinkedList < T >`. Com ele, é possível adicionar um elemento 
+            //no início(`AddFirst()`), no fim(`AddLast()`), antes(`AddBefore()`)
+            //ou depois(`AddAfter()`) de outro elemento da mesma coleção.
+
+            //O que caracteriza uma lista ligada é que **cada elemento é 
+            //chamado de nó * *, remetendo à classe do .NET Framework denominada 
+            //`LinkedListNode`. Estes nós possuem dois ponteiros(ou duas 
+            //referências) que apontam tanto para o elemento anterior quanto para o 
+            //próximo, de forma a manter a ordem de entrada dos elementos 
+            //nesta lista, o que possibilida a inserção ou remoção 
+            //independentemente de sua posição.
+
+            //As desvantagens de uma lista ligada implicam no acesso a um 
+            //elemento de forma indexada, o que é impossível, e na busca de 
+            //elementos em uma lista, causando um processo bastante demorado.
+            //Nestes casos, recomenda-se o uso de `List<T>`.
+
+            //Em uma situação de operações com conjuntos matemáticos, para 
+            //saber se um elemento está contido em uma coleção ou não, ou para 
+            //saber se duas coleções possuem um ou mais elementos em comum, 
+            //utilizaremos `HashSet < T >`.
+
+            //Outro tipo de coleção ideal para a busca de um valor a partir de 
+            //uma chave a ser armazenada(um cliente por um CPF, por exemplo, ou 
+            //uma empresa através do CNPJ) é o **dicionário * *, ou 
+            //`Dictionary < TKey, TValue >`, para o qual forneceremos o tipo 
+            //da chave e do valor.
+
+            Console.ReadLine();
+        }
     }
 }
