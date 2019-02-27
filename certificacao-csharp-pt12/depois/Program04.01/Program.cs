@@ -36,7 +36,7 @@ namespace Program04
             //- Título do filme são letras ou espaços
             var entrada3 = "123:O Exterminador do Futuro:1984:107";
 
-            var padrao = ".+:.+:.+:.+";
+            var padrao = "^[0-9]+:([a-z]|[A-Z]| )+:[0-9][0-9][0-9][0-9]:[0-9]+$";
 
             bool registroValido = Regex.IsMatch(entrada3, padrao);
             if (registroValido)
