@@ -10,8 +10,20 @@ namespace Program04
             //Tarefa 1: separar nomes das linguagens por vírgulas:
             var entrada1 = "CSharp Java Python Ruby Swift Scala ObjectiveC";
 
+            var saida1 = entrada1.Replace(" ", ",");
+            Console.WriteLine(saida1);
+
+
+
             //Tarefa 2: separar nomes das linguagens por vírgulas:
             var entrada2 = "CSharp     Java   Python  Ruby Swift Scala ObjectiveC";
+
+            //var saida2 = entrada2.Replace(" ", ",");
+
+            var saida2 = Regex.Replace(entrada2, " +", ",");
+
+            Console.WriteLine(saida2);
+
 
             //Tarefa 3: validar o registro:
             //Formato do Registro
@@ -24,7 +36,9 @@ namespace Program04
             //- Título do filme são letras ou espaços
             var entrada3 = "123:O Exterminador do Futuro:1984:107";
 
-            bool registroValido = true;
+            var padrao = ".+:.+:.+:.+";
+
+            bool registroValido = Regex.IsMatch(entrada3, padrao);
             if (registroValido)
             {
                 Console.WriteLine("Registro de filme VÁLIDO");
