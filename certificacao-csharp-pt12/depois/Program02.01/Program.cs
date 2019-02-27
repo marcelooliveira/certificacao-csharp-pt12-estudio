@@ -109,7 +109,7 @@ namespace Program02._01
 
             //var pares = new List<int> { 0, 2, 4, 6, 8, 10 };
             //var impares = new List<int> { 1, 3, 5, 7, 9 };
-            //var primos = new List<int> { 1, 3, 5, 7, 9 };
+            //var primos = new List<int> { 1, 2, 3, 5, 7 };
 
             //TIPO_COLECAO<int> zeroAdez = new TIPO_COLECAO<int>();
             //pares.ForEach(n => zeroAdez.INCLUIR(n));
