@@ -122,7 +122,7 @@ namespace Program02._01
             //}
             //Console.WriteLine();
 
-            //TAREFA 6: ASSOCIANDO CHAVES E VALORES
+            //TAREFA 7: ASSOCIANDO CHAVES E VALORES
 
             //TIPO_COLECAO<string, string> weekDays = new TIPO_COLECAO<string, string>
             //{
