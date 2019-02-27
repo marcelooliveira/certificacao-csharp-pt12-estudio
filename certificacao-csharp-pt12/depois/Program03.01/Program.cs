@@ -6,44 +6,32 @@ namespace Program03
     {
         static void Main(string[] args)
         {
-            Filme filme = new Filme(diretor: "James Cameron", titulo: "Titanic", duracaoMinutos: 194);
+            ContaCorrente conta =
+                new ContaCorrente("1235-7", "José da Silva", 100.0m);
 
-            ImprimeFilme(filme);
-            //ImprimeFilme(new Filme(filme));
-            
-            Console.WriteLine(filme.Diretor);
-            Console.ReadKey();
-        }
+            Console.WriteLine(conta);
+            Console.WriteLine();
 
-        static void ImprimeFilme(Filme filme)
-        {
-            filme.Diretor = "Fulano de tal";
+            Console.ReadLine();
         }
     }
 
-    public class Filme
+    public class ContaCorrente
     {
-        public string Diretor { get; set; }
-        public string Titulo { get; set; }
-        public int DuracaoMinutos { get; set; }
+        public string Numero { get; set; }
+        public string Titular { get; set; }
+        public decimal Saldo { get; set; }
 
         public override string ToString()
         {
-            return Diretor + " - " + Titulo + " - " + DuracaoMinutos.ToString() + " minutos";
+            return $"Número C/C: {Numero}\nTitular: {Titular}\nSaldo: {Saldo:C}";
         }
 
-        public Filme(string diretor, string titulo, int duracaoMinutos)
+        public ContaCorrente(string numero, string titular, decimal saldoInicial)
         {
-            Diretor = diretor;
-            Titulo = titulo;
-            DuracaoMinutos = duracaoMinutos;
-        }
-
-        public Filme(Filme outro)
-        {
-            Diretor = outro.Diretor;
-            Titulo = outro.Titulo;
-            DuracaoMinutos = outro.DuracaoMinutos;
+            Numero = numero;
+            Titular = titular;
+            Saldo = saldoInicial;
         }
     }
 }
