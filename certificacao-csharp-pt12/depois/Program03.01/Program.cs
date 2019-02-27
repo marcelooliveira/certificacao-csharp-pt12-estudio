@@ -6,11 +6,28 @@ namespace Program03
     {
         static void Main(string[] args)
         {
-            ContaCorrente conta =
-                new ContaCorrente("1235-7", "José da Silva", 100.0m);
+            try
+            {
+                ContaCorrente conta =
+                    new ContaCorrente("1235-7", "José da Silva", 100.0m);
 
-            Console.WriteLine(conta);
-            Console.WriteLine();
+                Console.WriteLine(conta);
+                Console.WriteLine();
+
+                conta.Sacar(20.0m);
+
+                Console.WriteLine(conta);
+                Console.WriteLine();
+
+                conta.Sacar(200.0m);
+
+                Console.WriteLine(conta);
+                Console.WriteLine();
+            }
+            catch   (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
 
             Console.ReadLine();
         }
@@ -20,7 +37,7 @@ namespace Program03
     {
         public string Numero { get; set; }
         public string Titular { get; set; }
-        public decimal Saldo { get; set; }
+        public decimal Saldo { get; private set; }
 
         public override string ToString()
         {
@@ -32,6 +49,16 @@ namespace Program03
             Numero = numero;
             Titular = titular;
             Saldo = saldoInicial;
+        }
+
+        public void Sacar(decimal valor)
+        {
+            if (valor > Saldo)
+            {
+                throw new ArgumentException("Saldo insuficiente");
+            }
+
+            Saldo -= valor;
         }
     }
 }
