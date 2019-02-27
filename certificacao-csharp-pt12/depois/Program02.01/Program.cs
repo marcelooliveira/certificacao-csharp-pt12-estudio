@@ -81,64 +81,64 @@ namespace Program02._01
 
             //TAREFA 4: MATRIZ DE DADOS DE TAMANHO FIXO
 
-            //TIPO_COLECAO imagem = new TIPO_COLECAO[65535];
+            int[] imagem = new int[65535];
 
-            //int x = 31;
-            //int y = 14;
+            int x = 31;
+            int y = 14;
 
-            //const int rgb = 0x9EA3A7;
-            //imagem.ITEM_NA_POSICAO(27) = rgb;
+            const int rgb = 0x9EA3A7;
+            imagem[27] = rgb;
 
             //TAREFA 5: LIGANDO OS NÓS
 
-            //TIPO_COLECAO<string> dias = new TIPO_COLECAO<string>();
-            //var d4 = dias.ADICIONAR_PRIMEIRO("quarta");
-            //var d2 = dias.ADICIONAR_ANTES_DE(d4, "segunda");
-            //var d3 = dias.ADICIONAR_DEPOIS_DE(d2, "terça");
-            //var d6 = dias.ADICIONAR_DEPOIS_DE(d4, "sexta");
-            //var d7 = dias.ADICIONAR_DEPOIS_DE(d6, "sábado");
-            //var d5 = dias.ADICIONAR_ANTES_DE(d6, "quinta");
-            //var d1 = dias.ADICIONAR_ANTES_DE(d2, "domingo");
-            //foreach (var dia in dias)
-            //{
-            //    Console.WriteLine(dia);
-            //}
-            //Console.WriteLine();
+            LinkedList<string> dias = new LinkedList<string>();
+            var d4 = dias.AddFirst("quarta");
+            var d2 = dias.AddBefore(d4, "segunda");
+            var d3 = dias.AddAfter(d2, "terça");
+            var d6 = dias.AddAfter(d4, "sexta");
+            var d7 = dias.AddAfter(d6, "sábado");
+            var d5 = dias.AddBefore(d6, "quinta");
+            var d1 = dias.AddBefore(d2, "domingo");
+            foreach (var dia in dias)
+            {
+                Console.WriteLine(dia);
+            }
+            Console.WriteLine();
 
             //TAREFA 6: UNINDO COLEÇÕES SEM DUPLICAÇÃO
 
-            //var pares = new List<int> { 0, 2, 4, 6, 8, 10 };
-            //var impares = new List<int> { 1, 3, 5, 7, 9 };
-            //var primos = new List<int> { 1, 2, 3, 5, 7 };
+            var pares = new List<int> { 0, 2, 4, 6, 8, 10 };
+            var impares = new List<int> { 1, 3, 5, 7, 9 };
+            var primos = new List<int> { 1, 2, 3, 5, 7 };
 
-            //TIPO_COLECAO<int> zeroAdez = new TIPO_COLECAO<int>();
-            //pares.ForEach(n => zeroAdez.INCLUIR(n));
-            //impares.ForEach(n => zeroAdez.INCLUIR(n));
-            //primos.ForEach(n => zeroAdez.INCLUIR(n));
+            ISet<int> zeroAdez = new HashSet<int>();
+            pares.ForEach(n => zeroAdez.Add(n));
+            impares.ForEach(n => zeroAdez.Add(n));
+            primos.ForEach(n => zeroAdez.Add(n));
 
-            //foreach (var n in zeroAdez)
-            //{
-            //    Console.WriteLine(n);
-            //}
-            //Console.WriteLine();
+            foreach (var n in zeroAdez)
+            {
+                Console.WriteLine(n);
+            }
+            Console.WriteLine();
 
             //TAREFA 7: ASSOCIANDO CHAVES E VALORES
 
-            //TIPO_COLECAO<string, string> weekDays = new TIPO_COLECAO<string, string>
-            //{
-            //    { "SEG", "Monday" },
-            //    { "TER", "Tuesday" },
-            //    { "QUA", "Wednesday" },
-            //    { "QUI", "Thursday" },
-            //    { "SEX", "Friday" }
-            //};
-            //weekDays.Add("SAB", "Saturday");
-            //weekDays.Add("DOM", "Sunday");
+            Dictionary<string, string> weekDays = new Dictionary<string, string>
+            {
+                { "SEG", "Monday" },
+                { "TER", "Tuesday" },
+                { "QUA", "Wednesday" },
+                { "QUI", "Thursday" },
+                { "SEX", "Friday" }
+            };
+            weekDays.Add("SAB", "Saturday");
+            weekDays.Add("DOM", "Sunday");
 
-            //foreach (var chaveValor in weekDays)
-            //{
-            //    Console.WriteLine("{0} - {1}", chaveValor.Key, chaveValor.Value);
-            //}
+            foreach (var chaveValor in weekDays)
+            {
+                Console.WriteLine("{0} - {1}", chaveValor.Key, chaveValor.Value);
+            }
 
             Console.ReadLine();
         }
