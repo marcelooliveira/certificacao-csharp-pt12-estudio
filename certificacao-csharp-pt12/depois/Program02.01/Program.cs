@@ -7,20 +7,7 @@ namespace Program02._01
     {
         static void Main(string[] args)
         {
-            //https://cursos.alura.com.br/course/csharp-collections/task/29512
-
-            //https://docs.google.com/presentation/d/1ICj8giHOiyW1AaHaiAtQyoGpW1LrhuqJ4GiX9BBHZHI/edit#slide=id.p
-
-            //Apresentaremos um pequeno guia para ajudarmos na escolha da 
-            //coleção adequada para determinadas situações. 
-            //Vamos imaginar uma coleção em que sempre iremos remover o primeiro 
-            //elemento colocado, isto é, a remoção será feita na mesma ordem da 
-            //entrada dos elementos.
-
-            //Como exemplo, usaremos uma fila de pedágio, ou uma fila de carros 
-            //em um estacionamento, em que é necessário manter - se a ordem de 
-            //prioridade. Assim, a coleção adequada é uma** fila**, ou 
-            //`Queue<T>`, em inglês.
+            //TAREFA 1: PRIMEIRO QUE ENTRA, PRIMEIRO QUE SAI (FIFO)
 
             //var veiculo1 = "van";
             //var veiculo2 = "kombi";
@@ -39,17 +26,7 @@ namespace Program02._01
             //Console.WriteLine(pedagio.REMOVER());
             //Console.WriteLine();
 
-            //Trata - se de uma coleção genérica que receberá os elementos 
-            //adicionados na fila pelo método `Enqueue()`. Os mesmos serão 
-            //removidos usando - se `Dequeue()` e, ao fazermos isto, os 
-            //elementos são reposicionados de forma que o segundo passa a 
-            //ser o primeiro, e assim sucessivamente.
-
-            //Há também situações em que o elemento removido será sempre o 
-            //último que foi adicionado.Isto ocorre com a coleção genérica 
-            //**pilha * *, ou `Stack<T>`, em inglês. Nela, os elementos 
-            //são adicionados usando - se `Push()`, e removidos com o método 
-            //`Pop()`.
+            //TAREFA 2: PRIMEIRO QUE ENTRA, ÚLTIMO QUE SAI (LIFO)
 
             //string site0 = "<<vazio>>";
             //string site1 = "google.com";
@@ -72,10 +49,7 @@ namespace Program02._01
             //Console.WriteLine("Voltando para: {0}", historicoNavegador.REMOVER());
             //Console.WriteLine();
 
-            //Existe um tipo de coleção, a mais flexível e poderosa de todas: 
-            //a `List<T>`, uma implementação do .NET Framework que permite 
-            //a inserção de um elemento em qualquer posição da coleção
-            //(`Insert()`), ou especificamente no fim(`Add()` e `AddRange()`).
+            //TAREFA 3: UMA COLEÇÃO PODEROSA
 
             //TIPO_COLECAO<string> meses = new TIPO_COLECAO<string>
             //{
@@ -87,10 +61,6 @@ namespace Program02._01
             //meses.INCLUIR("setembro");
             //meses.INCLUIR_FAIXA(new string[] { "novembro", "dezembro", "onzembro" });
 
-            //É possível também remover elementos do meio da coleção, com 
-            //`Remove()` ou `RemoveRange()`, limpar a coleção(`Clear()`) ou 
-            //reverter sua ordem(`Reverse()`).
-
             //meses.REMOVER_NO_INDICE(4);
             //meses.REMOVER_NO_INDICE(meses.Count - 1);
             //meses.INCLUIR(9, "outubro");
@@ -101,9 +71,6 @@ namespace Program02._01
             //}
             //Console.WriteLine();
 
-            //Pode -se também ordená-la por 
-            //um critério qualquer, com `Sort()`.
-
             //meses.Sort((m1, m2) => m1.CompareTo(m2));
 
             //for (int i = 0; i < meses.Count; i++)
@@ -112,10 +79,7 @@ namespace Program02._01
             //}
             //Console.WriteLine();
 
-            //Caso tenhamos que lidar com arquivos de baixo nível(bytes, 
-            //números inteiros, por exemplo) ou tamanho fixo, quase sempre 
-            //utilizamos uma **matriz * *, ou* array*, em inglês, uma coleção 
-            //de tamanho fixo que facilita o uso através do índice da coleção.
+            //TAREFA 4: MATRIZ DE DADOS DE TAMANHO FIXO
 
             //TIPO_COLECAO imagem = new TIPO_COLECAO[65535];
 
@@ -125,18 +89,7 @@ namespace Program02._01
             //const int rgb = 0x9EA3A7;
             //imagem.ITEM_NA_POSICAO(27) = rgb;
 
-            //Tomando como exemplo um array cujas informações gráficas, no 
-            //caso, uma cor, um pixel sendo lido em uma determinada posição, 
-            //são mantidas, é bastante simples acessar os dados de forma 
-            //indexada. No entanto, quando precisamos alterar sua dimensão, 
-            //é mais recomendado convertê-lo para uma lista.
-
-            //Ainda, há situações em que é necessário inserir ou remover muitos 
-            //dados em uma coleção, de forma rápida. Nestes casos, pode-se 
-            //considerar utilizar uma** lista ligada * *, ou 
-            //`LinkedList<T>`. Com ele, é possível adicionar um elemento 
-            //no início(`AddFirst()`), no fim(`AddLast()`), antes(`AddBefore()`)
-            //ou depois(`AddAfter()`) de outro elemento da mesma coleção.
+            //TAREFA 5: LIGANDO OS NÓS
 
             //TIPO_COLECAO<string> dias = new TIPO_COLECAO<string>();
             //var d4 = dias.ADICIONAR_PRIMEIRO("quarta");
@@ -152,23 +105,7 @@ namespace Program02._01
             //}
             //Console.WriteLine();
 
-            //O que caracteriza uma lista ligada é que **cada elemento é 
-            //chamado de nó * *, remetendo à classe do .NET Framework denominada 
-            //`LinkedListNode`. Estes nós possuem dois ponteiros(ou duas 
-            //referências) que apontam tanto para o elemento anterior quanto para o 
-            //próximo, de forma a manter a ordem de entrada dos elementos 
-            //nesta lista, o que possibilida a inserção ou remoção 
-            //independentemente de sua posição.
-
-            //As desvantagens de uma lista ligada implicam no acesso a um 
-            //elemento de forma indexada, o que é impossível, e na busca de 
-            //elementos em uma lista, causando um processo bastante demorado.
-            //Nestes casos, recomenda-se o uso de `List<T>`.
-
-            //Em uma situação de operações com conjuntos matemáticos, para 
-            //saber se um elemento está contido em uma coleção ou não, ou para 
-            //saber se duas coleções possuem um ou mais elementos em comum, 
-            //utilizaremos `HashSet<T>`.
+            //TAREFA 6: UNINDO COLEÇÕES SEM DUPLICAÇÃO
 
             //var pares = new List<int> { 0, 2, 4, 6, 8, 10 };
             //var impares = new List<int> { 1, 3, 5, 7, 9 };
@@ -185,11 +122,7 @@ namespace Program02._01
             //}
             //Console.WriteLine();
 
-            //Outro tipo de coleção ideal para a busca de um valor a partir de 
-            //uma chave a ser armazenada(um cliente por um CPF, por exemplo, ou 
-            //uma empresa através do CNPJ) é o **dicionário * *, ou 
-            //`Dictionary<TKey,TValue>`, para o qual forneceremos o tipo 
-            //da chave e do valor.
+            //TAREFA 6: ASSOCIANDO CHAVES E VALORES
 
             //TIPO_COLECAO<string, string> weekDays = new TIPO_COLECAO<string, string>
             //{
