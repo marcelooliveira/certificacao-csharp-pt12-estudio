@@ -7,106 +7,25 @@ namespace Program04
     {   
         static void Main1(string[] args)
         {
-            //Tarefa: separar nomes das linguagens por vírgulas
-            string entrada = "CSharp Java Python Ruby Swift Scala ObjectiveC";
+            //Tarefa 1: separar nomes das linguagens por vírgulas:
+            var entrada1 = "CSharp Java Python Ruby Swift Scala ObjectiveC";
 
-            string substituido = entrada.Replace(" ", ",");
 
-            //string padraoComparacao = " ";
-            //string padraoSubstituicao = ",";
-            //string substituido = Regex.Replace(entrada, padraoComparacao, padraoSubstituicao);
+            //Tarefa 2: separar nomes das linguagens por vírgulas:
+            var entrada2 = "CSharp     Java   Python  Ruby Swift Scala ObjectiveC";
 
-            Console.WriteLine(substituido);
-            Console.ReadKey();
-        }
-
-        static void Main(string[] args)
-        {
-            //Tarefa: separar nomes das linguagens por vírgulas
-            string entrada = "CSharp    Java Python   Ruby  Swift   Scala       ObjectiveC";
-
-            string padraoComparacao = " +";
-            string padraoSubstituicao = ",";
-
-            string substituido = Regex.Replace(entrada, padraoComparacao, padraoSubstituicao);
-
-            Console.WriteLine(substituido);
-            Console.ReadKey();
-        }
-
-        static void Main3(string[] args)
-        {
+            //Tarefa 3: validar o registro:
             //Formato do Registro
-            //- campos separados por dois pontos: ":"
-            //- Campo 1: Id do filme
-            //- Campo 2: Título do filme
-            //- Campo 3: Ano do filme
-            //- Campo 4: Duração do filme em minutos
-
-            string entrada = "2:O Exterminador do Futuro:1984:107";
-
-            string padraoRegex = ".+:.+:.+:.+";
-
-            if (Regex.IsMatch(entrada, padraoRegex))
-            {
-                Console.WriteLine("Registro de filme VÁLIDO");
-            }
-            else
-            {
-                Console.WriteLine("Registro de filme INVÁLIDO");
-            }
-            Console.ReadKey();
-        }
-
-        static void Main4(string[] args)
-        {
-            //Formato do Registro
-            //- campos separados por dois pontos: ":"
-            //- Campo 1: Id do filme
-            //- Campo 2: Título do filme
-            //- Campo 3: Ano do filme
-            //- Campo 4: Duração do filme em minutos
-            //- Id, ano e duração são campos numéricos
-
-            string entrada = "2:O Exterminador do Futuro:1984:107";
-
-            string padraoRegex = @"[0-9]+:.+:[0-9]+:[0-9]+$";
-
-            if (Regex.IsMatch(entrada, padraoRegex))
-            {
-                Console.WriteLine("Registro de filme VÁLIDO");
-            }
-            else
-            {
-                Console.WriteLine("Registro de filme INVÁLIDO");
-            }
-            Console.ReadKey();
-        }
-
-        static void Main5(string[] args)
-        {
-            //Formato do Registro
-            //- campos separados por dois pontos: ":"
+            //- campos devem ser separados por dois pontos: ":"
             //- Campo 1: Id do filme
             //- Campo 2: Título do filme
             //- Campo 3: Ano do filme
             //- Campo 4: Duração do filme em minutos
             //- Id, ano e duração são campos numéricos
             //- Título do filme são letras ou espaços
+            var entrada3 = "2:O Exterminador do Futuro:1984:107";
 
-            string entrada = "2:O Exterminador do Futuro:1984:107";
-            
-            string padraoRegex = @"^[0-9]+:([a-z]|[A-Z]| )+:[0-9]+:[0-9]+$";
-
-            if (Regex.IsMatch(entrada, padraoRegex))
-            {
-                Console.WriteLine("Registro de filme VÁLIDO");
-            }
-            else
-            {
-                Console.WriteLine("Registro de filme INVÁLIDO");
-            }
-            Console.ReadKey();
+            Console.ReadLine();
         }
     }
 }
