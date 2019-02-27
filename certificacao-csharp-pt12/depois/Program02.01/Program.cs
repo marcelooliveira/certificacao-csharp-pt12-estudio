@@ -9,75 +9,75 @@ namespace Program02._01
         {
             //TAREFA 1: PRIMEIRO QUE ENTRA, PRIMEIRO QUE SAI (FIFO)
 
-            //var veiculo1 = "van";
-            //var veiculo2 = "kombi";
-            //var veiculo3 = "guincho";
-            //var veiculo4 = "pickup";
+            var veiculo1 = "van";
+            var veiculo2 = "kombi";
+            var veiculo3 = "guincho";
+            var veiculo4 = "pickup";
 
-            //TIPO_COLECAO<string> pedagio = new TIPO_COLECAO<string>();
-            //pedagio.ADICIONAR(veiculo1);
-            //pedagio.ADICIONAR(veiculo2);
-            //pedagio.ADICIONAR(veiculo3);
-            //pedagio.ADICIONAR(veiculo4);
+            Queue<string> pedagio = new Queue<string>();
+            pedagio.Enqueue(veiculo1);
+            pedagio.Enqueue(veiculo2);
+            pedagio.Enqueue(veiculo3);
+            pedagio.Enqueue(veiculo4);
 
-            //Console.WriteLine(pedagio.REMOVER());
-            //Console.WriteLine(pedagio.REMOVER());
-            //Console.WriteLine(pedagio.REMOVER());
-            //Console.WriteLine(pedagio.REMOVER());
-            //Console.WriteLine();
+            Console.WriteLine(pedagio.Dequeue());
+            Console.WriteLine(pedagio.Dequeue());
+            Console.WriteLine(pedagio.Dequeue());
+            Console.WriteLine(pedagio.Dequeue());
+            Console.WriteLine();
 
             //TAREFA 2: PRIMEIRO QUE ENTRA, ÚLTIMO QUE SAI (LIFO)
 
-            //string site0 = "<<vazio>>";
-            //string site1 = "google.com";
-            //string site2 = "caelum.com.br";
-            //string site3 = "alura.com.br";
+            string site0 = "<<vazio>>";
+            string site1 = "google.com";
+            string site2 = "caelum.com.br";
+            string site3 = "alura.com.br";
 
-            //TIPO_COLECAO<string> historicoNavegador = new TIPO_COLECAO<string>();
+            Stack<string> historicoNavegador = new Stack<string>();
 
-            //historicoNavegador.INCLUIR(site0);
-            //Console.WriteLine("Navegando para: {0}", site1);
-            //historicoNavegador.INCLUIR(site1);
-            //Console.WriteLine("Navegando para: {0}", site2);
-            //historicoNavegador.INCLUIR(site2);
-            //Console.WriteLine("Navegando para: {0}", site3);
-            //historicoNavegador.INCLUIR(site3);
+            historicoNavegador.Push(site0);
+            Console.WriteLine("Navegando para: {0}", site1);
+            historicoNavegador.Push(site1);
+            Console.WriteLine("Navegando para: {0}", site2);
+            historicoNavegador.Push(site2);
+            Console.WriteLine("Navegando para: {0}", site3);
+            historicoNavegador.Push(site3);
 
-            //Console.WriteLine("Voltando para: {0}", historicoNavegador.REMOVER());
-            //Console.WriteLine("Voltando para: {0}", historicoNavegador.REMOVER());
-            //Console.WriteLine("Voltando para: {0}", historicoNavegador.REMOVER());
-            //Console.WriteLine("Voltando para: {0}", historicoNavegador.REMOVER());
-            //Console.WriteLine();
+            Console.WriteLine("Voltando para: {0}", historicoNavegador.Pop());
+            Console.WriteLine("Voltando para: {0}", historicoNavegador.Pop());
+            Console.WriteLine("Voltando para: {0}", historicoNavegador.Pop());
+            Console.WriteLine("Voltando para: {0}", historicoNavegador.Pop());
+            Console.WriteLine();
 
             //TAREFA 3: UMA COLEÇÃO PODEROSA
 
-            //TIPO_COLECAO<string> meses = new TIPO_COLECAO<string>
-            //{
-            //    "janeiro","fevereiro","março","abril",
-            //    "abril","maio","junho",
-            //    "julho","agosto"             
-            //};
+            List<string> meses = new List<string>
+            {
+                "janeiro","fevereiro","março","abril",
+                "abril","maio","junho",
+                "julho","agosto"
+            };
 
-            //meses.INCLUIR("setembro");
-            //meses.INCLUIR_FAIXA(new string[] { "novembro", "dezembro", "onzembro" });
+            meses.Add("setembro");
+            meses.AddRange(new string[] { "novembro", "dezembro", "onzembro" });
 
-            //meses.REMOVER_NO_INDICE(4);
-            //meses.REMOVER_NO_INDICE(meses.Count - 1);
-            //meses.INCLUIR(9, "outubro");
+            meses.RemoveAt(4);
+            meses.RemoveAt(meses.Count - 1);
+            meses.Insert(9, "outubro");
 
-            //for (int i = 0; i < meses.Count; i++)
-            //{
-            //    Console.WriteLine("mês {0}: {1}", i + 1, meses[i]);
-            //}
-            //Console.WriteLine();
+            for (int i = 0; i < meses.Count; i++)
+            {
+                Console.WriteLine("mês {0}: {1}", i + 1, meses[i]);
+            }
+            Console.WriteLine();
 
-            //meses.Sort((m1, m2) => m1.CompareTo(m2));
+            meses.Sort((m1, m2) => m1.CompareTo(m2));
 
-            //for (int i = 0; i < meses.Count; i++)
-            //{
-            //    Console.WriteLine("{0}", meses[i]);
-            //}
-            //Console.WriteLine();
+            for (int i = 0; i < meses.Count; i++)
+            {
+                Console.WriteLine("{0}", meses[i]);
+            }
+            Console.WriteLine();
 
             //TAREFA 4: MATRIZ DE DADOS DE TAMANHO FIXO
 

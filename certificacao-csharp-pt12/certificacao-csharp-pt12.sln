@@ -6,9 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item01 - Validar dados JSON", "Item01 - Validar dados JSON", "{5FACA200-1C05-42EA-B703-04A090A5FB75}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item02 - escolher o tipo de coleção adequado", "Item02 - escolher o tipo de coleção adequado", "{0F279CEF-3035-4FAC-B256-58084BB10545}"
-	ProjectSection(SolutionItems) = preProject
-		depois\Program02\QUAL COLEÇÃO ESCOLHER.md = depois\Program02\QUAL COLEÇÃO ESCOLHER.md
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item03 - gerenciar integridade de dados", "Item03 - gerenciar integridade de dados", "{E5BA316C-D8DA-452A-A447-DEA76CFB4FAE}"
 EndProject
@@ -66,17 +63,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Program04.01", "depois\Prog
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Program04.02", "depois\Program04.02\Program04.02.csproj", "{BEE15609-5700-4910-A4A2-7EFDDC730A20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program02.01", "depois\Program02.01\Program02.01.csproj", "{120769EA-C10C-464C-9829-3A007CC07A8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Program02.01", "depois\Program02.01\Program02.01.csproj", "{120769EA-C10C-464C-9829-3A007CC07A8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program05.01", "depois\Program05.01\Program05.01.csproj", "{727A7F7E-8DAA-43DF-8651-29186B4ED5E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Program05.01", "depois\Program05.01\Program05.01.csproj", "{727A7F7E-8DAA-43DF-8651-29186B4ED5E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program06.01", "depois\Program06.01\Program06.01.csproj", "{688CFB1D-9DF8-4148-94BF-8965DBEA255B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Program06.01", "depois\Program06.01\Program06.01.csproj", "{688CFB1D-9DF8-4148-94BF-8965DBEA255B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program07.01", "depois\Program07.01\Program07.01.csproj", "{17E44200-0966-4CD1-BF3D-4E167BC6F9F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Program07.01", "depois\Program07.01\Program07.01.csproj", "{17E44200-0966-4CD1-BF3D-4E167BC6F9F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program06.02", "depois\Program06.02\Program06.02.csproj", "{AC2A4062-08E2-49EA-AA83-89926296A96B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Program06.02", "depois\Program06.02\Program06.02.csproj", "{AC2A4062-08E2-49EA-AA83-89926296A96B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program06.03", "depois\Program06.03\Program06.03.csproj", "{429BC695-EF82-4A62-A62F-64AC45923328}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Program06.03", "depois\Program06.03\Program06.03.csproj", "{429BC695-EF82-4A62-A62F-64AC45923328}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
