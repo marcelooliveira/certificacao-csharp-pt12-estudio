@@ -8,54 +8,35 @@ namespace Program06._01
     {
         static void Main(string[] args)
         {
+            //TAREFA : CRIPTOGRAFAR A MENSAGEM ABAIXO
+
             string mensagemSecreta = "Dados secretos que precisam ser protegidos";
 
-            // array de bytes para manter a mensagem criptografada
-            byte[] textoCifrado;
+            // 1. array de bytes para manter a mensagem criptografada
 
-            // matriz de bytes para manter a chave usada para criptografia
-            byte[] chave;
+            // 2. matriz de bytes para manter a chave usada para criptografia
 
-            // matriz de bytes para manter o vetor de inicialização que foi usado para criptografia
-            byte[] vetorInicializacao;
-
-            // Cria uma instância de Aes
+            // 3. Cria uma instância de Aes
             // Isso cria uma chave aleatória e um vetor de inicialização
-            using (Aes aes = Aes.Create())
-            {
-                // copia a chave e o vetor de inicialização
-                chave = aes.Key;
-                vetorInicializacao = aes.IV;
 
-                // cria um criptografador para criptografar alguns dados
-                ICryptoTransform encriptador = aes.CreateEncryptor();
+                // 3.1. copia a chave
 
-                // Cria um novo fluxo de memória para receber os
+                // 3.2 cria um criptografador para criptografar alguns dados
+
+                // 3.3 Cria um novo fluxo de memória para receber os
                 // dados criptografados.
-                using (MemoryStream fluxoMemoria = new MemoryStream())
-                {
-                    // crie um CryptoStream, diga ao stream para gravar
-                    // e o encriptador para usar. Também defina o modo
-                    using (CryptoStream fluxoEncriptado = new CryptoStream(fluxoMemoria,
-                        encriptador, CryptoStreamMode.Write))
-                    {
-                        // cria um gravador de fluxo a partir do cryptostream
-                        using (StreamWriter escritor = new StreamWriter(fluxoEncriptado))
-                        {
-                            // Escreva a mensagem secreta para o fluxo.
-                            escritor.Write(mensagemSecreta);
-                        }
-                        // obtém a mensagem criptografada do fluxo
-                        textoCifrado = fluxoMemoria.ToArray();
-                    }
-                }
-            }
 
-            // Exibe nossos dados
-            Console.WriteLine("Texto a ser encriptado: {0}", mensagemSecreta);
-            ExibirBytes("Chave: ", chave);
-            ExibirBytes("Vetor de inicialização: ", vetorInicializacao);
-            ExibirBytes("Encriptada: ", textoCifrado);
+                    // 3.4. crie um CryptoStream, diga ao stream para gravar
+                    // e o encriptador para usar. Também defina o modo
+
+                        // 3.5 cria um gravador de fluxo a partir do cryptostream
+
+                            // 3.6 Escreva a mensagem secreta para o fluxo.
+
+                        // 3.7 obtém a mensagem criptografada do fluxo
+
+            // 4. Exibir o texto, a chave e o texto encriptado
+
 
             Console.ReadLine();
         }
