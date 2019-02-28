@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item01 - Validar dados JSON", "Item01 - Validar dados JSON", "{5FACA200-1C05-42EA-B703-04A090A5FB75}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item02 - escolher o tipo de coleção adequado", "Item02 - escolher o tipo de coleção adequado", "{0F279CEF-3035-4FAC-B256-58084BB10545}"
+	ProjectSection(SolutionItems) = preProject
+		depois\Program02\QUAL COLEÇÃO ESCOLHER.md = depois\Program02\QUAL COLEÇÃO ESCOLHER.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Item03 - gerenciar integridade de dados", "Item03 - gerenciar integridade de dados", "{E5BA316C-D8DA-452A-A447-DEA76CFB4FAE}"
 EndProject
@@ -74,6 +77,11 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Program06.02", "depois\Program06.02\Program06.02.csproj", "{AC2A4062-08E2-49EA-AA83-89926296A96B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Program06.03", "depois\Program06.03\Program06.03.csproj", "{429BC695-EF82-4A62-A62F-64AC45923328}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercicios", "Exercicios", "{84E8105E-3BF5-4D79-87AA-612613010EF7}"
+	ProjectSection(SolutionItems) = preProject
+		Ex01.md = Ex01.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -168,6 +176,7 @@ Global
 		{17E44200-0966-4CD1-BF3D-4E167BC6F9F6} = {0B95B2FD-520B-4F4A-8682-07985A844B7E}
 		{AC2A4062-08E2-49EA-AA83-89926296A96B} = {CF6349D3-5388-4329-9629-38850DBD0BBF}
 		{429BC695-EF82-4A62-A62F-64AC45923328} = {CF6349D3-5388-4329-9629-38850DBD0BBF}
+		{84E8105E-3BF5-4D79-87AA-612613010EF7} = {0F279CEF-3035-4FAC-B256-58084BB10545}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5384676B-E280-4841-A149-457EA86B8239}

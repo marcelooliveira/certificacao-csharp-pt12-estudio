@@ -8,10 +8,10 @@ using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.Storage.Internal;
 using System;
 
-namespace Program02._01.Migrations
+namespace Program04._02.Migrations
 {
     [DbContext(typeof(FilmesContext))]
-    [Migration("20190225172358_Inicial")]
+    [Migration("20190228161627_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.Storage.Internal;
 using System;
 
-namespace Program02._01.Migrations
+namespace Program04._02.Migrations
 {
     [DbContext(typeof(FilmesContext))]
     partial class FilmesContextModelSnapshot : ModelSnapshot
