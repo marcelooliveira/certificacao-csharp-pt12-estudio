@@ -26,7 +26,7 @@ namespace Program06._02
                 chave = aes.Key;
 
                 // 3.2 cria um criptografador para criptografar alguns dados
-                ICryptoTransform cryptoTransform = aes.CreateEncryptor();
+                ICryptoTransform codificador = aes.CreateEncryptor();
 
                 // 3.3 Cria um novo fluxo de memória para receber os
                 // dados criptografados.
@@ -35,7 +35,7 @@ namespace Program06._02
                     // 3.4. crie um CryptoStream, diga ao stream para gravar
                     // e o encriptador para usar. Também defina o modo
                     using (CryptoStream cryptoStream =
-                        new CryptoStream(memoryStream, cryptoTransform,
+                        new CryptoStream(memoryStream, codificador,
                          CryptoStreamMode.Write))
                     {
                         // 3.5 cria um gravador de fluxo a partir do cryptostream
