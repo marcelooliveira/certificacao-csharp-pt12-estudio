@@ -46,12 +46,12 @@ namespace Program06._03
 
             // Agora faça a decodificação - use a chave privada para isso
             // Enviamos a alguém nossa chave pública e eles
-            // usei isso para criptografar dados que eles estão enviando para nós
+            // usam isso para criptografar dados que eles estão enviando para nós
 
             // Cria um novo RSA para descriptografar os dados
             RSACryptoServiceProvider decifradorRSA = new RSACryptoServiceProvider();
 
-            // Configurar o decryptor do XML na chave privada            decifradorRSA.FromXmlString(chavePrivada);
+            // Configurar o decryptor do XML na chave privada decifradorRSA.FromXmlString(chavePrivada);
             bytesDecifrados = decifradorRSA.Decrypt(bytesCifrados, fOAEP: false);
 
             ExibirBytes("Bytes decifrados: ", bytesDecifrados);
