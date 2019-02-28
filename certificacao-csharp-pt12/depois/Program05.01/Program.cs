@@ -18,13 +18,18 @@ namespace Program05._01
                 Console.WriteLine("Digite um número:");
                 entrada = Console.ReadLine();
 
-                //valido = ???
-                
+                valido = !string.IsNullOrWhiteSpace(entrada);
+
+                valido = valido &&
+                    int.TryParse(entrada, out numero);
+
                 if (!valido)
                 {
                     Console.WriteLine("Entrada inválida!");
                 }
             } while (!valido);
+
+            //numero = int.Parse(entrada);
 
             Console.WriteLine("O dobro de {0} é {1}", numero, numero * 2);
 
