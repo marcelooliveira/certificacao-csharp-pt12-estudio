@@ -28,7 +28,7 @@ namespace Filmes.Models
         [Required]
         [MinLength(5)]
         [MaxLength(255)]
-        [RegularExpression("^([a-z]|[A-Z]| )$")]
+        [RegularExpression("^([a-z]|[A-Z]| )+$")]
         public string Titulo { get; set; }
         [Range(30, 240)]
         public int DuracaoMinutos { get; set; }

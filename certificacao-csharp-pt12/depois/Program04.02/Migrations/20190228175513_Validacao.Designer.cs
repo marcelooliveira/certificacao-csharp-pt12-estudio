@@ -11,9 +11,10 @@ using System;
 namespace Program04._02.Migrations
 {
     [DbContext(typeof(FilmesContext))]
-    partial class FilmesContextModelSnapshot : ModelSnapshot
+    [Migration("20190228175513_Validacao")]
+    partial class Validacao
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
