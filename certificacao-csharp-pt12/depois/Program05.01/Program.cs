@@ -10,7 +10,7 @@ namespace Program05._01
             //VALIDANDO CONTRA STRING VAZIA, ESPAÇOS EM BRANCO E NÚMERO INVÁLIDO
 
             bool valido = true;
-            int numero;
+            int numero = 0;
             string entrada;
 
             do
@@ -19,14 +19,12 @@ namespace Program05._01
                 entrada = Console.ReadLine();
 
                 //valido = ???
-
+                
                 if (!valido)
                 {
                     Console.WriteLine("Entrada inválida!");
                 }
             } while (!valido);
-
-            numero = Convert.ToInt32(entrada);
 
             Console.WriteLine("O dobro de {0} é {1}", numero, numero * 2);
 
