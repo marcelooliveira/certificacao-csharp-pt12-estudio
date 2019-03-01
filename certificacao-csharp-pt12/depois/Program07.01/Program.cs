@@ -41,7 +41,6 @@ namespace Program07._01
                 // Cria um novo RSA para criptografar os dados
 
                 //TAREFA: ARMAZENAR A CHAVE PRIVADA COM SEGURANÇA
-
                 RSACryptoServiceProvider encriptadorRSA = new RSACryptoServiceProvider();
 
                 // pega as chaves do criptografador
@@ -80,7 +79,6 @@ namespace Program07._01
                 // Cria um novo RSA para criptografar os dados
 
                 //TAREFA: ARMAZENAR A CHAVE PRIVADA COM SEGURANÇA
-                
                 RSACryptoServiceProvider encriptadorRSA = new RSACryptoServiceProvider();
 
                 // Agora diga ao encriptador para usar a chave pública para criptografar os dados
