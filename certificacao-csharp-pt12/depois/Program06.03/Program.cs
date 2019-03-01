@@ -11,15 +11,16 @@ namespace Program06._03
             string mensagemSecreta = "Dados secretos que precisam ser protegidos";
 
             Console.WriteLine("Mensagem secreta: {0}", mensagemSecreta);
+            Console.WriteLine();
 
             // RSA funciona em matrizes de bytes, não em cadeias de texto
             // Isso irá converter nossa string de entrada em bytes e de volta
             ASCIIEncoding conversor = new ASCIIEncoding();
 
-            // Converta o texto simples em uma matriz de bytes
-            byte[] bytesDesprotegidos = conversor.GetBytes(mensagemSecreta);
+            // Convert the plain text into a byte array
+            byte[] mensagemBytes = conversor.GetBytes(mensagemSecreta);
 
-            ExibirBytes("Bytes desprotegidos: ", bytesDesprotegidos);
+            ExibirBytes("Bytes da mensagem: ", mensagemBytes);
 
             byte[] bytesCifrados;
             byte[] bytesDecifrados;
@@ -40,7 +41,7 @@ namespace Program06._03
             // especifica como a saída é "preenchida" com bytes extras
             // Para compatibilidade máxima com sistemas de recebimento, defina como
             // false
-            bytesCifrados = encriptadorRSA.Encrypt(bytesDesprotegidos, fOAEP: false);
+            bytesCifrados = encriptadorRSA.Encrypt(mensagemBytes, fOAEP: false);
 
             ExibirBytes("Bytes encriptados: ", bytesCifrados);
 
@@ -51,13 +52,16 @@ namespace Program06._03
             // Cria um novo RSA para descriptografar os dados
             RSACryptoServiceProvider decifradorRSA = new RSACryptoServiceProvider();
 
+            // Configure the decryptor from the XML in the private key
+            decifradorRSA.FromXmlString(chavePrivada);
+
             // Configurar o decryptor do XML na chave privada decifradorRSA.FromXmlString(chavePrivada);
             bytesDecifrados = decifradorRSA.Decrypt(bytesCifrados, fOAEP: false);
-
+            
             ExibirBytes("Bytes decifrados: ", bytesDecifrados);
             Console.WriteLine("string decifrada: {0}", conversor.GetString(bytesDecifrados));
 
-            Console.ReadLine();
+            Console.ReadKey();
         }
 
         static void ExibirBytes(string titulo, byte[] bytes)
