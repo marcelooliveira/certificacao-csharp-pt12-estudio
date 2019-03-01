@@ -8,71 +8,115 @@ namespace Program06._03
     {
         static void Main(string[] args)
         {
-            string mensagemSecreta = "Dados secretos que precisam ser protegidos";
+            var alice = new Pessoa("Alice");
+            var bob = new Pessoa("Bob");
 
-            Console.WriteLine("Mensagem secreta: {0}", mensagemSecreta);
-            Console.WriteLine();
+            string mensagemOriginal = "Dados secretos que precisam ser protegidos";
 
-            // RSA funciona em matrizes de bytes, não em cadeias de texto
-            // Isso irá converter nossa string de entrada em bytes e de volta
-            ASCIIEncoding conversor = new ASCIIEncoding();
+            var bytesCodificados = alice.CodificarMensagem(mensagemOriginal, bob.ChavePublica);
 
-            // Convert the plain text into a byte array
-            byte[] mensagemBytes = conversor.GetBytes(mensagemSecreta);
+            var mensagemDecodificada = bob.DecodificarMensagem(bytesCodificados);
 
-            ExibirBytes("Bytes da mensagem: ", mensagemBytes);
-
-            byte[] bytesCifrados;
-            byte[] bytesDecifrados;
-
-            // Cria um novo RSA para criptografar os dados
-            RSACryptoServiceProvider encriptadorRSA = new RSACryptoServiceProvider();
-
-            // pega as chaves do criptografador
-            string chavePublica = encriptadorRSA.ToXmlString(includePrivateParameters: false);
-            Console.WriteLine("Chave pública: {0}", chavePublica);
-            string chavePrivada = encriptadorRSA.ToXmlString(includePrivateParameters: true);
-            Console.WriteLine("Chave privada: {0}", chavePrivada);
-
-            // Agora diga ao encyryptor para usar a chave pública para criptografar os dados
-            encriptadorRSA.FromXmlString(chavePrivada);
-
-            // Use o criptografador para criptografar os dados. O parâmetro fOAEP
-            // especifica como a saída é "preenchida" com bytes extras
-            // Para compatibilidade máxima com sistemas de recebimento, defina como
-            // false
-            bytesCifrados = encriptadorRSA.Encrypt(mensagemBytes, fOAEP: false);
-
-            ExibirBytes("Bytes encriptados: ", bytesCifrados);
-
-            // Agora faça a decodificação - use a chave privada para isso
-            // Enviamos a alguém nossa chave pública e eles
-            // usam isso para criptografar dados que eles estão enviando para nós
-
-            // Cria um novo RSA para descriptografar os dados
-            RSACryptoServiceProvider decifradorRSA = new RSACryptoServiceProvider();
-
-            // Configure the decryptor from the XML in the private key
-            decifradorRSA.FromXmlString(chavePrivada);
-
-            // Configurar o decryptor do XML na chave privada decifradorRSA.FromXmlString(chavePrivada);
-            bytesDecifrados = decifradorRSA.Decrypt(bytesCifrados, fOAEP: false);
-            
-            ExibirBytes("Bytes decifrados: ", bytesDecifrados);
-            Console.WriteLine("string decifrada: {0}", conversor.GetString(bytesDecifrados));
+            Console.WriteLine("string decifrada: {0}", mensagemDecodificada);
 
             Console.ReadKey();
         }
 
-        static void ExibirBytes(string titulo, byte[] bytes)
+        public class Pessoa
         {
-            Console.Write(titulo);
-            foreach (byte b in bytes)
+            private readonly string nome;
+            private readonly string chavePrivada;
+
+            public string ChavePublica { get; }
+
+            public Pessoa(string nome)
             {
-                Console.Write("{0:X} ", b);
+                this.nome = nome;
+
+                // Cria um novo RSA para criptografar os dados
+                RSACryptoServiceProvider encriptadorRSA = new RSACryptoServiceProvider();
+
+                // pega as chaves do criptografador
+                ChavePublica = encriptadorRSA.ToXmlString(includePrivateParameters: false);
+                chavePrivada = encriptadorRSA.ToXmlString(includePrivateParameters: true);
+
+                Console.WriteLine(new string('=', 100));
+                Console.WriteLine("Dados do usuário: {0}", nome);
+                Console.WriteLine(new string('=', 100));
+                Console.WriteLine("Chave privada de {0}: {1}", nome, chavePrivada);
+                Console.WriteLine("Chave pública de {0}: {1}", nome, ChavePublica);
+                Console.WriteLine(new string('=', 100));
+                Console.WriteLine();
             }
-            Console.WriteLine();
+
+
+            public byte[] CodificarMensagem(string mensagemOriginal, string chavePublicaDestinatario)
+            {
+                byte[] bytesCifrados;
+
+                //TAREFA : CRIPTOGRAFAR A MENSAGEM ABAIXO
+                //USANDO O PADRÃO RSA (RIVEST-SHAMIR-ADLEMAN) ASSIMÉTRICO
+
+                Console.WriteLine("Mensagem original: {0}", mensagemOriginal);
+                Console.WriteLine();
+
+                // RSA funciona em matrizes de bytes, não em cadeias de texto
+                // Isso irá converter nossa string de entrada em bytes e de volta
+                ASCIIEncoding conversor = new ASCIIEncoding();
+
+                // Converte a mensagem original em uma array de bytes
+                byte[] mensagemBytes = conversor.GetBytes(mensagemOriginal);
+
+                ExibirBytes("Bytes da mensagem original: ", mensagemBytes);
+
+                // Cria um novo RSA para criptografar os dados
+                RSACryptoServiceProvider encriptadorRSA = new RSACryptoServiceProvider();
+
+                // Agora diga ao encriptador para usar a chave pública para criptografar os dados
+                encriptadorRSA.FromXmlString(chavePublicaDestinatario);
+
+                // Use o criptografador para criptografar os dados. O parâmetro fOAEP
+                // especifica como a saída é "preenchida" com bytes extras
+                // Para compatibilidade máxima com sistemas de recebimento, defina como
+                // false
+                bytesCifrados = encriptadorRSA.Encrypt(mensagemBytes, fOAEP: false);
+
+                ExibirBytes("Bytes encriptados: ", bytesCifrados);
+                return bytesCifrados;
+            }
+
+            public string DecodificarMensagem(byte[] bytesCifrados)
+            {
+                //TAREFA : DESCRIPTOGRAFAR A MENSAGEM ABAIXO
+                //USANDO O PADRÃO RSA (RIVEST-SHAMIR-ADLEMAN) ASSIMÉTRICO
+                byte[] bytesDecifrados;
+
+                // Cria um novo RSA para descriptografar os dados
+                RSACryptoServiceProvider decifradorRSA = new RSACryptoServiceProvider();
+
+                // Configura o decodificador a partir do XML na chave privada
+                decifradorRSA.FromXmlString(chavePrivada);
+
+                // Configurar o decryptor do XML na chave privada decifradorRSA.FromXmlString(chavePrivada);
+                bytesDecifrados = decifradorRSA.Decrypt(bytesCifrados, fOAEP: false);
+
+                ExibirBytes("Bytes decifrados: ", bytesDecifrados);
+
+                ASCIIEncoding conversor2 = new ASCIIEncoding();
+                return conversor2.GetString(bytesDecifrados);
+            }
+            
+            void ExibirBytes(string titulo, byte[] bytes)
+            {
+                Console.Write(titulo);
+                foreach (byte b in bytes)
+                {
+                    Console.Write("{0:X} ", b);
+                }
+                Console.WriteLine();
+            }
         }
+
     }
 }
 

@@ -11,6 +11,7 @@ namespace Program06._02
             //TAREFA : CRIPTOGRAFAR A MENSAGEM ABAIXO
             //USANDO O PADRÃO AES (ADVANCED ENCRYPTION STANDARD)
 
+            #region ALICE
             string mensagemSecreta = "Dados secretos que precisam ser protegidos";
 
             // 1. array de bytes para manter a mensagem criptografada
@@ -59,10 +60,13 @@ namespace Program06._02
             Console.WriteLine("Mensagem original: {0}", mensagemSecreta);
             ExibirBytes("Chave: ", chave);
             ExibirBytes("Texto encriptado: ", textoCifrado);
+            #endregion
 
             //TAREFA : DESCRIPTOGRAFAR OS DADOS DA VARIÁVEL textoCifrado
             //USANDO O PADRÃO AES (ADVANCED ENCRYPTION STANDARD)
             //E USANDO VETOR DE INICIALIZAÇÃO
+
+            #region BOB
 
             using (Aes aes = Aes.Create())
             {
@@ -77,7 +81,7 @@ namespace Program06._02
                         new CryptoStream(memoryStream, decodificador,
                              CryptoStreamMode.Read))
                     {
-                        using (StreamReader streamReader = 
+                        using (StreamReader streamReader =
                             new StreamReader(cryptoStream))
                         {
                             textoDecifrado = streamReader.ReadToEnd();
@@ -86,7 +90,8 @@ namespace Program06._02
                 }
             }
 
-            Console.WriteLine("Texto decifrado: {0}", textoDecifrado);
+            Console.WriteLine("Texto decifrado: {0}", textoDecifrado); 
+            #endregion
 
             Console.ReadLine();
         }
