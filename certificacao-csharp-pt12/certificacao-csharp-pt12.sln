@@ -97,6 +97,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program07.02", "depois\Prog
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program07.03", "depois\Program07.03\Program07.03.csproj", "{2D0E797F-773D-4892-AC5F-2299C12AAFE0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program06.04", "depois\Program06.04\Program06.04.csproj", "{56B3965C-2C60-4A80-923D-9782D38B297A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -179,6 +181,10 @@ Global
 		{2D0E797F-773D-4892-AC5F-2299C12AAFE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D0E797F-773D-4892-AC5F-2299C12AAFE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D0E797F-773D-4892-AC5F-2299C12AAFE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56B3965C-2C60-4A80-923D-9782D38B297A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56B3965C-2C60-4A80-923D-9782D38B297A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56B3965C-2C60-4A80-923D-9782D38B297A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56B3965C-2C60-4A80-923D-9782D38B297A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -226,6 +232,7 @@ Global
 		{CFB1AD1F-A7A9-463F-AB8F-CAAC545B8EEF} = {C0216346-F816-4A81-8D73-0ECD0177ABB4}
 		{D31AA1C6-90C6-49A9-9CCF-8846AC6B1CF2} = {C0216346-F816-4A81-8D73-0ECD0177ABB4}
 		{2D0E797F-773D-4892-AC5F-2299C12AAFE0} = {C0216346-F816-4A81-8D73-0ECD0177ABB4}
+		{56B3965C-2C60-4A80-923D-9782D38B297A} = {CF6349D3-5388-4329-9629-38850DBD0BBF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5384676B-E280-4841-A149-457EA86B8239}
