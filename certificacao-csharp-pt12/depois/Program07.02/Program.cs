@@ -13,7 +13,8 @@ namespace Program07._02
             csp.KeyContainerName = nomeContainer;
             // Cria um novo objeto RSA para encriptar os dados
             RSACryptoServiceProvider rsaStore = new RSACryptoServiceProvider(csp);
-            Console.WriteLine("Chaves armazenadas: {0}", rsaStore.ToXmlString(includePrivateParameters: false));
+            Console.WriteLine("Chaves armazenadas: {0}", 
+                rsaStore.ToXmlString(includePrivateParameters: false));
 
             rsaStore.PersistKeyInCsp = false;
             rsaStore.Clear();
