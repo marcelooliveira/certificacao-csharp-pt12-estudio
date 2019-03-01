@@ -8,14 +8,11 @@ namespace Program06._03
     {
         static void Main(string[] args)
         {
-            var alice = new Pessoa("Alice");
-            var bob = new Pessoa("Bob");
-
             string mensagemOriginal = "Dados secretos que precisam ser protegidos";
+            string mensagemDecodificada = "";
 
-            var bytesCodificados = alice.CodificarMensagem(mensagemOriginal, bob.ChavePublica);
-
-            var mensagemDecodificada = bob.DecodificarMensagem(bytesCodificados);
+            //TAREFA: ALICE PRECISA ENVIAR UMA MENSAGEM SECRETA PARA BOB.
+            //IMPLEMENTE O CÓDIGO NECESSÁRIO UTILIZANDO A CLASSE PESSOA ABAIXO.
 
             Console.WriteLine("string decifrada: {0}", mensagemDecodificada);
 

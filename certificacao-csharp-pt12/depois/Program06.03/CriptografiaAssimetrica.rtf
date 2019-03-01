@@ -1,0 +1,117 @@
+﻿1) Alice precisa compartilhar um documento secreto
+
+👩 Alice                            👨 Bob
+
+                                                                                                 
+📄                  ---->                                                            
+
+
+
+
+
+2) Bob receberá o documento de Alice
+
+👩 Alice                            👨 Bob
+
+                                                                                                 
+📄                  --📄-->         📄                                                 
+
+
+
+
+
+3) Mas o documento pode ser interceptado
+
+👩 Alice           🕵 espião        👨 Bob
+
+                                                                                                 
+📄                  --📄-->         📄                                                 
+
+
+
+
+
+4) Então Alice resolve criar 2 chaves RSA...
+
+👩 Alice                             👨 Bob
+
+🔑 privada (Alice)                                                                                                 
+🔑 pública (Alice)                                                                                                 
+📄                  --📄-->          📄                                
+
+
+
+
+5) e criptografar o documento
+
+👩 Alice                            👨 Bob
+
+🔑 privada (Alice)                                                                                                 
+🔑 pública (Alice)                                                                                                  
+📄🔒              --📄🔒-->         📄🔒                              
+
+
+
+
+6) Mas agora Bob não consegue ler o documento!
+
+👩 Alice                            👨 Bob
+
+🔑 privada (Alice)                                                                                                 
+🔑 pública (Alice)                                                                                                  
+📄🔒              --📄🔒-->         📄🔒????                              
+
+
+
+
+7) Então Alice compartilha SOMENTE a chave PÚBLICA
+
+👩 Alice                           👨 Bob
+
+🔑 privada                                                                                                  
+🔑 pública (Alice)--🔑---->       🔑 (Alice)                                                                      
+📄🔒              --📄🔒-->        📄🔒                              
+
+
+
+
+8) Mas agora a chave também pode ser interceptada!
+
+👩 Alice          🕵 espião         👨 Bob
+
+🔑 privada                                                                                                  
+🔑 pública        --🔑---->        🔑 (Alice)                                                                      
+📄🔒              --📄🔒-->         📄🔒                              
+
+
+
+
+9) Sem problemas! A 🔑 pública não serve
+para DECIFRAR o documento!
+👩 Alice          🕵 espião         👨 Bob
+
+🔑 privada                                                                                                  
+🔑 pública        --🔑---->        🔑 (Alice)                                                                      
+📄🔒              --📄🔒-->         📄🔒
+
+
+
+
+10) Bob usa a chave pública da Alice para abrir
+o documento
+👩 Alice          🕵 espião         👨 Bob
+
+🔑 privada                                                                                                  
+🔑 pública        --🔑---->        🔑 (Alice)                                                                      
+📄🔒              --📄🔒-->         📄🔒
+ 
+
+
+11) Alice só precisa proteger a chave privada!
+
+👩 Alice          🕵 espião         👨 Bob
+
+🔑 privada🏦                                                                                                  
+🔑 pública        --🔑---->        🔑 (Alice)                                                                      
+📄🔒              --📄🔒-->         📄🔒
+ 
