@@ -20,8 +20,15 @@ namespace Program08._01
             //TAREFA: VALIDAR A ASSINATURA DA MENSAGEM
             //========================================
 
+            bool valido = Validar(mensagem);
+            Console.WriteLine("Mensagem é válida? {0}", valido);
 
-            Console.ReadKey();
+            mensagem.Assinatura[2] = 123;
+
+            valido = Validar(mensagem);
+            Console.WriteLine("Mensagem é válida? {0}", valido);
+
+            Console.ReadLine();
         }
 
         public class Mensagem
@@ -81,7 +88,7 @@ namespace Program08._01
             //Abre o store de certificado
             store.Open(OpenFlags.ReadOnly);
 
-            //Obtém o primeiro certificado
+            //Obtém o primeiro certificado-
             X509Certificate2 certificate = store.Certificates[0];
             return certificate;
         }
