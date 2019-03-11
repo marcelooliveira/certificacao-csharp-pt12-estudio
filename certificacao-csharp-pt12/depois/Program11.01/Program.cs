@@ -8,7 +8,7 @@ namespace Program11._01
     {
         static void Main(string[] args)
         {
-            //TAREFA : CRIPTOGRAFAR A MENSAGEM ABAIXO
+            //CRIPTOGRAFIA DE MENSAGEM
             //USANDO O PADRÃO AES (ADVANCED ENCRYPTION STANDARD)
 
             string mensagemSecreta = "Dados secretos que precisam ser protegidos";
