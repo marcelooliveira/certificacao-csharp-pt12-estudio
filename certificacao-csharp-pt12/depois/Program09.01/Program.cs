@@ -4,12 +4,14 @@ namespace Program09._01
 {
     class Program
     {
-        static int CalcularChecksum(string origem)
+        static void Main(string[] args)
         {
-            int total = 0;
-            foreach (char ch in origem)
-                total = total + (int)ch;
-            return total;
+            //TAREFA: CALCULAR O "CHECK SUM" PARA AS MENSAGENS
+
+            ExibirChecksum("olá, mundo!");
+            ExibirChecksum("alura cursos online");
+
+            Console.ReadKey();
         }
 
         static void ExibirChecksum(string origem)
@@ -18,13 +20,12 @@ namespace Program09._01
                 origem, CalcularChecksum(origem));
         }
 
-        static void Main(string[] args)
+        static int CalcularChecksum(string mensagem)
         {
-            ExibirChecksum("Olá, mundo!");
-            ExibirChecksum("Mundo, olá");
-            ExibirChecksum("Olá, mundo, olá!");
+            //TAREFA: CALCULAR O "CHECK SUM" PARA A MENSAGEM
+            int soma = 0;
 
-            Console.ReadKey();
+            return soma;
         }
     }
 }
