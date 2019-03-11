@@ -9,9 +9,12 @@ namespace Program09._01
             //TAREFA: CALCULAR O "CHECK SUM" PARA AS MENSAGENS
 
             ExibirChecksum("olá, mundo!");
-            ExibirChecksum("alura cursos online");
+            ExibirChecksum("mundo, olá!");
 
-            Console.ReadKey();
+            ExibirChecksum("alura cursos online");
+            ExibirChecksum("cursos online alura");
+
+            Console.ReadLine();
         }
 
         static void ExibirChecksum(string origem)
@@ -24,6 +27,11 @@ namespace Program09._01
         {
             //TAREFA: CALCULAR O "CHECK SUM" PARA A MENSAGEM
             int soma = 0;
+
+            foreach (var ch in mensagem)
+            {
+                soma += ch;
+            }
 
             return soma;
         }
