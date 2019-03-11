@@ -38,7 +38,16 @@ namespace Program10._02
             byte[] hash = null;
 
             //TAREFA: CRIAR UM HASH COM 32 BYTES PARA CADA MENSAGEM
-            
+
+            ASCIIEncoding conversor = new ASCIIEncoding();
+
+            byte[] mensagemEmBytes = conversor.GetBytes(mensagem);
+
+            HashAlgorithm algoritmo =
+                System.Security.Cryptography.SHA256.Create();
+
+            hash = algoritmo.ComputeHash(mensagemEmBytes);
+
             return hash;
         }
     }
