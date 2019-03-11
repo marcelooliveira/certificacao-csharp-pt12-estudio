@@ -6,18 +6,17 @@ namespace Program10._02
 {
     class Program
     {
-        static byte[] CalcularHash(string origem)
+        static void Main(string[] args)
         {
-            // Isso irá converter a nossa string de entrada em bytes e vice-versa
-            ASCIIEncoding conversor = new ASCIIEncoding();
+            //TAREFA: CRIAR UM HASH COM 32 BYTES PARA CADA MENSAGEM
 
-            byte[] bytesOrigem = conversor.GetBytes(origem);
+            ExibirHash("olá, mundo!");
+            ExibirHash("mundo, olá!");
 
-            HashAlgorithm hasher = SHA256.Create();
+            ExibirHash("alura cursos online");
+            ExibirHash("cursos online alura");
 
-            byte[] hash = hasher.ComputeHash(bytesOrigem);
-
-            return hash;
+            Console.ReadLine();
         }
 
         static void ExibirHash(string origem)
@@ -34,13 +33,13 @@ namespace Program10._02
             Console.WriteLine();
         }
 
-        static void Main(string[] args)
+        static byte[] CalcularHash(string mensagem)
         {
-            ExibirHash("Olá, mundo!");
-            ExibirHash("Mundo, olá");
-            ExibirHash("Olá, mundo, olá!");
+            byte[] hash = null;
 
-            Console.ReadKey();
+            //TAREFA: CRIAR UM HASH COM 32 BYTES PARA CADA MENSAGEM
+            
+            return hash;
         }
     }
 }
